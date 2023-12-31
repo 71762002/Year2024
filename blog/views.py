@@ -8,12 +8,18 @@ def home(request):
      
 
     context = {
-        "new" : news[0],
+        "new_n" : news[4],
         "new_one" : news[1],
         "new_3" : news[2],
-        "new_uzim" : news[3],
         "new_uzim_about" : news[19],
-        "commint" : news[20]
+        "commint" : news[20],
+        "sovga" : news[21],
+        "sovga_1" : news[22],
+        "sovga_2" : news[23],
+        "sovga_3" : news[24],
+        "sovga_4" : news[25],
+        "sovga_5" : news[26]
+        
     }
  
     return render (request, 'index.html', context)

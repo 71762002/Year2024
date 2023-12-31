@@ -4,7 +4,7 @@ from django.db import models
 
 class Holiday(models.Model):
     title = models.CharField(max_length=200)
-    description = models.CharField(max_length=200)
+    description = models.CharField(max_length=200, blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
 
@@ -27,7 +27,7 @@ class AboutUs(models.Model):
 
 class Image(models.Model):
     image = models.ImageField(upload_to='image')
-    name = models.CharField(max_length=200)
+    name = models.CharField(max_length=200, blank=True, null=True)
     holiday = models.ForeignKey(Holiday, on_delete=models.SET_NULL, null=True)
 
     def __str__(self):
